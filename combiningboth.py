@@ -5,6 +5,7 @@ import os
 
 """------------------------------------------------------"""
 # Time to make key expire, change to whatever you want here
+# If you set it to None it will never expire
 # Time is in minutes
 EXPIRATION_TIME = 1
 """------------------------------------------------------"""
@@ -152,22 +153,26 @@ def main():
         print("Can not open \"time.txt\" or \"key.txt\"")
 
     # Check to see if the time is before the expiration time, if not, generate new key and expiration time
-    if listTime <= datetime.now().strftime("%H:%M").split(":"):
-        # Create new key and expiration time for key
-        print("WARNING: Key expired")
-        print("Generating new key...")
-
-        expirationTime()
-        createKey()
-
-        print("Done! If you try to decrypt past data, it won't work.\n")
-
-        encrypt()
-        again()
+    if EXPIRATION_TIME == None:
+        pass
 
     else:
-        encrypt()
-        again()
+        if listTime <= datetime.now().strftime("%H:%M").split(":"):
+            # Create new key and expiration time for key
+            print("WARNING: Key expired")
+            print("Generating new key...")
+
+            expirationTime()
+            createKey()
+
+            print("Done! If you try to decrypt past data, it won't work.\n")
+
+            encrypt()
+            again()
+
+        else:
+            encrypt()
+            again()
 
 
 main()

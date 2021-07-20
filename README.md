@@ -42,7 +42,7 @@ This program has a special feature; the key will expire
 By default it expires after one minute, but you can change it to what ever you want in ```combiningboth.py```
 
 ```python
-"""Lines 7-10"""
+""" Lines 7-10 """
 
 # Time to make key expire, change to whatever you want here
 # If you set it to None it will never expire

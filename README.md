@@ -14,25 +14,25 @@ pip install cryptography  # This package handles all of the data encryption
 
 ## Usage
 
-```
-Enter what you want to be encrypted and serialized: (Enter what you want encrypted)
+```bash
+Enter what you want to be encrypted and serialized:  # Enter what you want encrypted
 ```
 
-```
+```bash
 Decrypt data? (Y/N/clear):
 
-Y: decrypt and display data
-N: display encrypted data
-clear: clears data.txt
+# Y: decrypt and display data
+# N: display encrypted data
+# clear: clears data.txt
 
 Note: time.txt holds seralized and encrypted data
 ```
 
-```
+```bash
 Would you like to encrypt more? (Y/N)
 
-Y: restarts program
-N: stops program
+# Y: restarts program
+# N: stops program
 ```
 
 ## Key expiration

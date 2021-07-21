@@ -37,7 +37,7 @@ N: stops program
 
 ## Key expiration
 
-This program has a special feature; the key will expire
+This program has a special feature; the encryption key will expire within a given amount of time.
 
 By default it expires after one minute, but you can change it to what ever you want in ```combiningboth.py```
 
